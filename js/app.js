@@ -31,6 +31,10 @@ function init() {
   checkForWinner()
 }
 
+function setupBoard() {
+  
+}
+
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
   if (board[cardIdx] || winner) {
@@ -40,6 +44,15 @@ function handleClick(evt) {
   checkForWinner()
   render()
 }
+
+function checkForWinner() {
+  
+}
+
+function pickCard(index) {
+  board[index] = turn
+}
+
 // function render() {
 // 	renderHands();
 // 	renderControls();
