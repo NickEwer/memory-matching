@@ -1,57 +1,63 @@
 body {
-  background-color: gray;
+  background-color: rgb(152, 152, 152);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+} 
+
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-} 
+  position: relative;
+  align-items: center;
+  background-color: yellow;
+  padding: 40px 60px;
+  gap: 20px;
+}
+
+h2{
+  font-size: 32px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 
 .board {
   display: grid;
-  grid-template-rows: repeat(2, 15vmin);
-  grid-template-columns: repeat(8, 15vmin);
-  grid-gap: 3vmin;
+  grid-template-rows: repeat(4, 12vmin);
+  grid-template-columns: repeat(4, 12vmin);
+  grid-gap: 5px;
 }
 
 .card {
-  box-sizing: border-box;
-  display: inline-block;
-  margin: 5px 5px 50px 5px;
-  width: 4.0em;
-  height: 5.5em;
-  background-color: #fff;
-  border-radius: 0.20em;
-  border: 1px solid #c3c3c3;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  border: 2px solid black;
+  font-size: 10vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat:no-repeat;
+  background-size:contain;
   cursor: pointer;
 }
 
-.card.large {
-  font-size: 26px; 
-}
-
-.card.shadow {
-  box-shadow: 7px 7px 7px 0 rgba(41, 41, 41, 0.95);
-}
-
-button {
-  margin-top: 50px;
-  border-radius: 5px;
+#reset-button {
+  margin-top: 25px;
+  border-radius: 5px; 
   border: 3px solid black;
-  font-size: 16px;
+  font-size: 15px;
   background-color: white;
-  padding: 6px 10px;
-  letter-spacing: 0.5px;
+  padding: 10px 15px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   cursor: pointer;
 }
 
-button:hover {
+#reset-button:hover {
   color: white;
   background-color: black;
 }
