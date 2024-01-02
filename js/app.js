@@ -1,5 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
-
+const winningCombos = [
+  [0,0],
+  [1,1],
+  [2,2],
+  [3,3],
+  [4,4],
+  [5,5],
+  [6,6],
+  [7,7],
+]
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -14,8 +23,10 @@ const resetBtn = document.getElementById('reset-button')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
-
+cardEls.forEach(function(cardEl) {
+  cardEl.addEventListener('click', handleClick)
+})
+resetBtn.addEventListener('click', init)
 
 /*-------------------------------- Functions --------------------------------*/
 init()
