@@ -3,7 +3,7 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, cardDeck, player, turn, match, winner 
+let board, turn, match, score, winner 
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -18,23 +18,34 @@ const resetBtn = document.getElementById('reset-button')
 
 
 /*-------------------------------- Functions --------------------------------*/
+init()
 
-function render() {
-	renderHands();
-	renderControls();
-	if (winner) {
-		renderWinnerMessage();
-	} else {
-		renderTurnMessage();
-	}
+function init() {
+  board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  turn = 0
+  match = 0
+  score = 0
+  winner = false
+  render()
+  checkForWinner()
 }
+
+// function render() {
+// 	renderHands();
+// 	renderControls();
+// 	if (winner) {
+// 		renderWinnerMessage();
+// 	} else {
+// 		renderTurnMessage();
+// 	}
+// }
 
 
 //// 1. Define the required variables used to track the state of the Gamepad
 ////  - Use variable named: ‘board’, ‘cardDeck’, ‘player’, ‘turn’, ‘match’, ‘winner’
 //// 2. Store cached element references
 ////  - Create cashed elements for: cards, score, game status message, reset button
-// 3. Upon loading, the game state should be initialized, and a function should be called to render this game state
+//// 3. Upon loading, the game state should be initialized, and a function should be called to render this game state
 //  - Create an ‘init’ function
 //  - Create 16 elements representing the cards from the deck
 //  - Create a function that will shuffle and randomize card deck
