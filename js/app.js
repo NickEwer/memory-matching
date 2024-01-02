@@ -42,12 +42,12 @@ function init() {
 
 
 //// 1. Define the required variables used to track the state of the Gamepad
-////  - Use variable named: ‘board’, ‘cardDeck’, ‘player’, ‘turn’, ‘match’, ‘winner’
+////  - Use variable named: ‘board’, ‘turn’, ‘match’, 'score', ‘winner’
 //// 2. Store cached element references
 ////  - Create cashed elements for: cards, score, game status message, reset button
 //// 3. Upon loading, the game state should be initialized, and a function should be called to render this game state
-//  - Create an ‘init’ function
-//  - Create 16 elements representing the cards from the deck
+////  - Create an ‘init’ function
+////  - Create 16 elements representing the cards from the deck
 //  - Create a function that will shuffle and randomize card deck
 //  - Create a score status representing how many matches scored and how many turns are left
 // 4. The state of the game should be rendered to the user
