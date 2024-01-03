@@ -1,8 +1,11 @@
 /*-------------------------------- Constants --------------------------------*/
+const cardContainer = document.querySelector(".container")
+const cardFront = document.querySelectorAll(".front")
+const cardList = ["homer", "marge", "bart", "lisa", "maggie", "krusty", "burns", "milhouse"]
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, match, score, winner 
+let board, turn, match, score, winner, revealedCount, activeCard 
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -32,7 +35,12 @@ function init() {
 }
 
 function setupBoard() {
-  
+  let cards = cardList.concat(cardList)
+  cards = shuffleCards(cards)
+}
+
+function shuffleCards(cards) {
+  return cards
 }
 
 function handleClick(evt) {
@@ -53,16 +61,9 @@ function pickCard(index) {
   board[index] = turn
 }
 
-// function render() {
-// 	renderHands();
-// 	renderControls();
-// 	if (winner) {
-// 		renderWinnerMessage();
-// 	} else {
-// 		renderTurnMessage();
-// 	}
-// }
+function render() {
 
+}
 
 //// 1. Define the required variables used to track the state of the Gamepad
 ////  - Use variable named: ‘board’, ‘turn’, ‘match’, 'score', ‘winner’

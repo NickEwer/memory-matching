@@ -14,7 +14,7 @@ body {
   justify-content: center;
   position: relative;
   align-items: center;
-  background-color: yellow;
+  background-color: rgb(213, 213, 46);
   padding: 40px 60px;
   gap: 20px;
 }
@@ -34,13 +34,14 @@ h2{
 }
 
 .card {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   font-size: 10vmin;
   display: flex;
   align-items: center;
   justify-content: center;
   background-repeat:no-repeat;
   background-size:contain;
+  background-color: rgb(91, 85, 85);
   cursor: pointer;
 }
 
