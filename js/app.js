@@ -47,6 +47,8 @@ function setupBoard() {
   })
 }
 
+// copied shuffle Fisher-Yates function from: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array#2450976
+
 function shuffleCards(cards) {
   let currentIndex = cards.length, randomIndex;
   while (currentIndex > 0) {
@@ -57,7 +59,6 @@ function shuffleCards(cards) {
   }
   return cards;
 }
-// copied shuffle function from 
 
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
