@@ -52,9 +52,6 @@ function shuffleCards(cards) {
 
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
-  if (board[cardIdx] || winner) {
-    return
-  }
   flipCard(cardIdx)
   checkForWinner()
   render()
@@ -68,8 +65,20 @@ function pickCard(index) {
   board[index] = turn
 }
 
-function render() {
+function updateBoard() {
+  board.forEach(function(card, idx) {
+    if (card.isFlipped) {
+      cardEls[idx].textContent = card.name
+    } else {
+      cardEls[idx].textContent = ""
+    }
 
+  })
+} 
+
+function render() {
+  updateBoard()
+  // updateMessage()
 }
 
 //// 1. Define the required variables used to track the state of the Gamepad
