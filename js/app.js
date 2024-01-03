@@ -82,7 +82,10 @@ function checkForMatch(cardIdx) {
 }
 
 function checkForWinner() {
-  
+  if (match === 8) {
+    winner = true
+    confetti.start(3000)
+  }
 }
 
 function pickCard(index) {
@@ -104,6 +107,7 @@ function render() {
   updateBoard()
   // updateMessage()
 }
+
 
 //// 1. Define the required variables used to track the state of the Gamepad
 ////  - Use variable named: ‘board’, ‘turn’, ‘match’, 'score', ‘winner’
