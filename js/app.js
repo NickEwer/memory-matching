@@ -25,18 +25,25 @@ resetBtn.addEventListener('click', init)
 init()
 
 function init() {
-  board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  board = []
   turn = 0
   match = 0
   score = 0
   winner = false
+  setupBoard()
   render()
-  checkForWinner()
 }
 
 function setupBoard() {
   let cards = cardList.concat(cardList)
   cards = shuffleCards(cards)
+  cards.forEach((card) => {
+    let cardObj = {
+      name: card, 
+      isFlipped: false
+    }
+    board.push(cardObj)
+  })
 }
 
 function shuffleCards(cards) {
