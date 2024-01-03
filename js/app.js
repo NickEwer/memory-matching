@@ -57,6 +57,10 @@ function handleClick(evt) {
   render()
 }
 
+function flipCard (cardIdx) {
+  board[cardIdx].isFlipped = !board[cardIdx].isFlipped
+}
+
 function checkForWinner() {
   
 }
