@@ -33,7 +33,7 @@ function init() {
   mismatchShowing = false
   winner = false
   lose = false
-  timeLeft = 600
+  timeLeft = 10
   setupBoard()
   clearInterval(timerIntervalId)
   timerIntervalId = null
@@ -75,7 +75,13 @@ function startTimer() {
 
 function tick() {
 	timeLeft--
-	renderTime()
+  if (timeLeft === 0) {
+    clearInterval(timerIntervalId)
+    lose = true
+    render()
+  } else {
+    renderTime()
+  }
 }
 
 function renderTime() {
@@ -90,7 +96,7 @@ function renderTime() {
 
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
-  if (board[cardIdx].isFlipped || mismatchShowing) {
+  if (board[cardIdx].isFlipped || mismatchShowing || lose) {
     return 
   }
   if (activeCard !== null) {
