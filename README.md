@@ -1,7 +1,7 @@
-# Homer's Memory Challenge
+# Homer's Memory Challenge!
 
-(GameScreenshot.png "Logo Title Text 1")
+![alt text](/images/GameScreenshot.png)
 
 Memory Matching Card Game
 
-https://mmcg-br.netlify.app/
+[linked text] (https://mmcg-br.netlify.app/ "Play the game here!").
