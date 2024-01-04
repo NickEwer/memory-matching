@@ -5,7 +5,7 @@ const cardList = ["homer", "marge", "bart", "lisa", "maggie", "krusty", "burns",
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, match, score, winner, revealedCount, activeCard, mismatchShowing
+let board, moves, match, activeCard, mismatchShowing, winner, timer
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -13,8 +13,7 @@ const cardEls = document.querySelectorAll('.card')
 const scoreEl = document.querySelector('#score')
 const messageEl = document.querySelector('#message')
 const resetBtn = document.getElementById('reset-button')
-let countdownEl = document.getElementById('countdown')
-
+let timerEl = document.getElementById('timer')
 
 /*----------------------------- Event Listeners -----------------------------*/
 cardEls.forEach(function(cardEl) {
@@ -27,11 +26,10 @@ init()
 
 function init() {
   board = []
-  activeCard = null
-  turn = 0
+  moves = 0
   match = 0
+  activeCard = null
   mismatchShowing = false
-  score = 0
   winner = false
   setupBoard()
   render()
@@ -94,7 +92,7 @@ function checkForMatch(cardIdx) {
       render()
       activeCard = null
       mismatchShowing = false
-    }, 1400)
+    }, 1200)
   }
 }
 
@@ -103,10 +101,6 @@ function checkForWinner() {
     winner = true
     confetti.start(3000)
   }
-}
-
-function pickCard(index) {
-  board[index] = turn
 }
 
 function updateBoard() {
