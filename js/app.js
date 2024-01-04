@@ -35,6 +35,7 @@ function init() {
   timeLeft = 300
   setupBoard()
   clearInterval(timerIntervalId)
+  timerIntervalId = null
   render()
 }
 
@@ -65,7 +66,7 @@ function shuffleCards(cards) {
 
 function startTimer() {
 	if (timerIntervalId) {
-		clearInterval(timerIntervalId)
+		return
 	}
   renderTime()
 	timerIntervalId = setInterval(tick, 1000)
