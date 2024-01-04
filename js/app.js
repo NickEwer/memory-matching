@@ -136,7 +136,7 @@ function updateBoard() {
   board.forEach(function(card, idx) {
     if (card.isFlipped) {
       // cardEls[idx].textContent = card.name
-      // cardEls[idx].style.backgroundImage = `url(assets/images/${card.name}`
+      cardEls[idx].style.backgroundImage = `url(assets/images/${card.name}`
     } else {
       cardEls[idx].style.backgroundImage = "url(assets/images/cardback.png"
     }

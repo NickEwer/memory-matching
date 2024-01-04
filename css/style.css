@@ -41,7 +41,7 @@ h2{
   align-items: center;
   justify-content: center;
   background-repeat:no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   /* background-color: rgb(91, 85, 85); */
   cursor: pointer;
 }
