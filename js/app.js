@@ -1,7 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const cardContainer = document.querySelector(".container")
 const cardFront = document.querySelectorAll(".front")
-const cardList = ["homer.png", "marge", "bart", "lisa", "maggie", "krusty", "burns", "milhouse"]
+const cardList = ["homer.png", "marge.png", "bart.png", "lisa.png", "maggie.png", "krusty.png", "burns.png", "ned.png"]
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -183,19 +183,19 @@ function render() {
 ////  - Create an ‘init’ function
 ////  - Create 16 elements representing the cards from the deck
 ////  - Create a function that will shuffle and randomize card deck
-//  - Create a score status representing how many matches scored and how many turns tried
+////  - Create a score status representing how many matches scored and how many turns tried
 //// 4. The state of the game should be rendered to the user
 ////  - Create a render and update function to update card elements to indicate which cards have already been flipped
-//  - Update card board, matches, score, and turns
-// 5. Define the required constants
+////  - Update card board, matches, score, and turns
+//// 5. Define the required constants
 //   - Create a data array within its own file representing all possible cards and images used for the game
 //// 6. Handle a player clicking a card with a `handleClick` function
 ////  - Flip card if clicked on 
 ////  - On second card click, flip card and check for a match 
 ////  - Determine a match and have cards stay flipped if true and flip back down if false
-//  - Update turns and score per turn
+////  - Update turns and score per turn
 ////  - Determine winner when all sets are matched 
-//  - Determine loser when turns run out and not all cards are matched
+////  - Determine loser when turns run out and not all cards are matched
 //// 7. Create Reset functionality
 ////  - Add a reset button with an event listener to clear the score and call the init function
 
