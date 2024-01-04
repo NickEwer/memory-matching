@@ -135,9 +135,10 @@ function checkForWinner() {
 function updateBoard() {
   board.forEach(function(card, idx) {
     if (card.isFlipped) {
-      cardEls[idx].textContent = card.name
+      // cardEls[idx].textContent = card.name
+      // cardEls[idx].style.backgroundImage = `url(assets/images/${card.name}`
     } else {
-      cardEls[idx].textContent = ""
+      cardEls[idx].style.backgroundImage = "url(assets/images/cardback.png"
     }
   })
 } 

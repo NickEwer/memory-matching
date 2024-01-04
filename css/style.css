@@ -34,14 +34,15 @@ h2{
 }
 
 .card {
-  /* border: 2px solid black; */
-  font-size: 10vmin;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 12vmin;
   display: flex;
   align-items: center;
   justify-content: center;
   background-repeat:no-repeat;
-  background-size:contain;
-  background-color: rgb(91, 85, 85);
+  background-size: 100%;
+  /* background-color: rgb(91, 85, 85); */
   cursor: pointer;
 }
 
