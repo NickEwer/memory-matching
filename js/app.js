@@ -73,6 +73,7 @@ function handleClick(evt) {
     activeCard = cardIdx
     flipCard(cardIdx)
   }
+  moves++
   checkForWinner()
   render()
 }
@@ -83,7 +84,7 @@ function flipCard (cardIdx) {
 
 function checkForMatch(cardIdx) {
   if (board[cardIdx].name === board[activeCard].name) {
-    match ++
+    match++
     activeCard = null
   } else {
     mismatchShowing = true
@@ -111,12 +112,17 @@ function updateBoard() {
     } else {
       cardEls[idx].textContent = ""
     }
-
   })
 } 
 
+function updateStats() {
+  movesEl.textContent = moves
+  matchEl.textContent = match
+}
+
 function render() {
   updateBoard()
+  updateStats()
   // updateMessage()
 }
 
