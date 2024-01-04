@@ -16,14 +16,22 @@ body {
   align-items: center;
   background-color: rgb(213, 213, 46);
   padding: 40px 60px;
-  gap: 20px;
 }
 
-h2{
+h1{
   font-size: 32px;
   color: black;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 100px;
 }
 
 .board {

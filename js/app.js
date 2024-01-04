@@ -5,7 +5,7 @@ const cardList = ["homer.png", "marge", "bart", "lisa", "maggie", "krusty", "bur
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, moves, match, activeCard, mismatchShowing, winner, timeLeft, timerIntervalId
+let board, moves, match, activeCard, mismatchShowing, winner, lose, timeLeft, timerIntervalId
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -13,7 +13,7 @@ const cardEls = document.querySelectorAll('.card')
 const movesEl = document.querySelector('#moves')
 const matchEl = document.querySelector('#matches')
 const timerEl = document.querySelector('#timer')
-// const messageEl = document.querySelector('#message')
+const messageEl = document.querySelector('#message')
 const resetBtn = document.querySelector('#reset-button')
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -32,6 +32,7 @@ function init() {
   activeCard = null
   mismatchShowing = false
   winner = false
+  lose = false
   timeLeft = 600
   setupBoard()
   clearInterval(timerIntervalId)
@@ -148,11 +149,21 @@ function updateStats() {
   matchEl.textContent = match
 }
 
+function updateMessage() {
+  if (!winner && !lose){
+    messageEl.textContent = "Click a card, any card!"
+  } else if (winner) {
+    messageEl.textContent = "Woo-hoo! I am so smart! S-M-R-T!"
+  } else {
+    messageEl.textContent = "Trying is the first step towards failure!"
+  }
+}
+
 function render() {
   updateBoard()
   updateStats()
   renderTime()
-  // updateMessage()
+  updateMessage()
 }
 
 
