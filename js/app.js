@@ -1,7 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const cardContainer = document.querySelector(".container")
 const cardFront = document.querySelectorAll(".front")
-const cardList = ["homer", "marge", "bart", "lisa", "maggie", "krusty", "burns", "milhouse"]
+const cardList = ["homer.png", "marge", "bart", "lisa", "maggie", "krusty", "burns", "milhouse"]
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -32,7 +32,7 @@ function init() {
   activeCard = null
   mismatchShowing = false
   winner = false
-  timeLeft = 300
+  timeLeft = 600
   setupBoard()
   clearInterval(timerIntervalId)
   timerIntervalId = null
