@@ -5,14 +5,14 @@ const cardList = ["homer", "marge", "bart", "lisa", "maggie", "krusty", "burns",
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, moves, match, activeCard, mismatchShowing, winner, timer
+let board, moves, match, activeCard, mismatchShowing, winner, timeLeft, timerIntervalId
 
 
 /*------------------------ Cached Element References ------------------------*/
 const cardEls = document.querySelectorAll('.card')
-const movesEl = document.querySelector('#moves-display')
-const matchEl = document.querySelector('#matches-display')
-const timerEl = document.querySelector('#timer-display')
+const movesEl = document.querySelector('#moves')
+const matchEl = document.querySelector('#matches')
+const timerEl = document.querySelector('#timer')
 // const messageEl = document.querySelector('#message')
 const resetBtn = document.querySelector('#reset-button')
 
@@ -32,7 +32,9 @@ function init() {
   activeCard = null
   mismatchShowing = false
   winner = false
+  timeLeft = 300
   setupBoard()
+  clearInterval(timerIntervalId)
   render()
 }
 
@@ -61,6 +63,30 @@ function shuffleCards(cards) {
   return cards;
 }
 
+function startTimer() {
+	if (timerIntervalId) {
+		clearInterval(timerIntervalId)
+	}
+  renderTime()
+	timerIntervalId = setInterval(tick, 1000)
+}
+
+function tick() {
+	timeLeft--
+  confetti.start(50)
+	renderTime()
+}
+
+function renderTime() {
+  let min = Math.floor(timeLeft / 60)
+  let sec = timeLeft % 60
+  if (sec < 10) {
+    timerEl.textContent = `${min}:0${sec}`
+  } else {
+    timerEl.textContent = `${min}:${sec}`
+  }
+}
+
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
   if (board[cardIdx].isFlipped || mismatchShowing) {
@@ -74,6 +100,7 @@ function handleClick(evt) {
     flipCard(cardIdx)
   }
   moves++
+  startTimer() 
   checkForWinner()
   render()
 }
@@ -123,6 +150,7 @@ function updateStats() {
 function render() {
   updateBoard()
   updateStats()
+  renderTime()
   // updateMessage()
 }
 
