@@ -73,7 +73,6 @@ function startTimer() {
 
 function tick() {
 	timeLeft--
-  confetti.start(50)
 	renderTime()
 }
 
