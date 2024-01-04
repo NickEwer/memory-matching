@@ -1,6 +1,6 @@
 # Homer's Memory Challenge
 
-[logo]: GameScreenshot.png "Logo Title Text 2"
+(GameScreenshot.png "Logo Title Text 1")
 
 Memory Matching Card Game
 
