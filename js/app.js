@@ -33,7 +33,7 @@ function init() {
   mismatchShowing = false
   winner = false
   lose = false
-  timeLeft = 10
+  timeLeft = 600
   setupBoard()
   clearInterval(timerIntervalId)
   timerIntervalId = null
@@ -134,8 +134,10 @@ function checkForMatch(cardIdx) {
 
 function checkForWinner() {
   if (match === 8) {
+    clearInterval(timerIntervalId)
     winner = true
     confetti.start(3000)
+
   }
 }
 

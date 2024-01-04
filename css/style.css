@@ -44,7 +44,7 @@ h1{
 .card {
   border: 3px solid black;
   border-radius: 10px;
-  font-size: 50vmin;
+  font-size: 5vmin;
   display: flex;
   align-items: center;
   justify-content: center;
