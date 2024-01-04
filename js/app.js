@@ -5,7 +5,7 @@ const cardList = ["homer", "marge", "bart", "lisa", "maggie", "krusty", "burns",
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, match, score, winner, revealedCount, activeCard
+let board, turn, match, score, winner, revealedCount, activeCard, mismatchShowing
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -30,6 +30,7 @@ function init() {
   activeCard = null
   turn = 0
   match = 0
+  mismatchShowing = false
   score = 0
   winner = false
   setupBoard()
@@ -63,7 +64,7 @@ function shuffleCards(cards) {
 
 function handleClick(evt) {
   const cardIdx = parseInt(evt.target.id.replace('card', ''))
-  if (board[cardIdx].isFlipped) {
+  if (board[cardIdx].isFlipped || mismatchShowing) {
     return 
   }
   if (activeCard !== null) {
@@ -86,12 +87,14 @@ function checkForMatch(cardIdx) {
     match ++
     activeCard = null
   } else {
+    mismatchShowing = true
     setTimeout(() => {
       board[cardIdx].isFlipped = false
       board[activeCard].isFlipped = false
       render()
       activeCard = null
-    }, 1250) 
+      mismatchShowing = false
+    }, 1400)
   }
 }
 
