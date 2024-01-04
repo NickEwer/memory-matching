@@ -10,10 +10,11 @@ let board, moves, match, activeCard, mismatchShowing, winner, timer
 
 /*------------------------ Cached Element References ------------------------*/
 const cardEls = document.querySelectorAll('.card')
-const scoreEl = document.querySelector('#score')
-const messageEl = document.querySelector('#message')
-const resetBtn = document.getElementById('reset-button')
-let timerEl = document.getElementById('timer')
+const movesEl = document.querySelector('#moves-display')
+const matchEl = document.querySelector('#matches-display')
+const timerEl = document.querySelector('#timer-display')
+// const messageEl = document.querySelector('#message')
+const resetBtn = document.querySelector('#reset-button')
 
 /*----------------------------- Event Listeners -----------------------------*/
 cardEls.forEach(function(cardEl) {
