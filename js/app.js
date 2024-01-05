@@ -3,7 +3,17 @@ const cardContainer = document.querySelector(".container")
 const cardFront = document.querySelectorAll(".front")
 const cardList = ["homer.png", "marge.png", "bart.png", "lisa.png", "maggie.png", "krusty.png", "burns.png", "ned.png"]
 
-
+const dohSound = new Audio('../assets/audio/doh.mp3')
+const woohooSound = new Audio('../assets/audio/homer-woohoo.mp3')
+const winnerSound = new Audio('../assets/audio/omgwinner.mp3')
+const buzzerSound = new Audio('../assets/audio/timerbuzz.mp3')
+const backgroundSound = new Audio('../assets/audio/simptheme.mp3')
+dohSound.volume = 0.1
+woohooSound.volume = 0.3
+winnerSound.volume = 0.1
+buzzerSound.volume = 0.3
+backgroundSound.volume = 0.02
+backgroundSound.loop = true
 /*---------------------------- Variables (state) ----------------------------*/
 let board, moves, match, activeCard, mismatchShowing, winner, lose, timeLeft, timerIntervalId
 
@@ -110,6 +120,7 @@ function handleClick(evt) {
   startTimer() 
   checkForWinner()
   render()
+  backgroundSound.play()
 }
 
 function flipCard (cardIdx) {
@@ -122,6 +133,7 @@ function checkForMatch(cardIdx) {
     activeCard = null
   } else {
     mismatchShowing = true
+    dohSound.play()
     setTimeout(() => {
       board[cardIdx].isFlipped = false
       board[activeCard].isFlipped = false
@@ -137,7 +149,7 @@ function checkForWinner() {
     clearInterval(timerIntervalId)
     winner = true
     confetti.start(3000)
-
+    winnerSound.play()
   }
 }
 
