@@ -17,8 +17,16 @@ Memory Matching Card Game
 
 ## Ice Box 🧊
 
-- [ ] todo
-- [x] todo
-
-* [ ] todo
-* [x] todo
+- [x] Font design
+- [x] Highlight cards flipped
+- [x] Card animaitons
+- [x] Add timer
+- [x] Sound
+- [x] Audio button
+- [x] Confetti
+- [ ] Difficulty modes
+- [ ] Different themes for each difficulty; e.g. Universal Studios Park themes
+- [ ] Change confetti to themed emotes
+- [ ] Navigaiton bar
+- [ ] Dark mode
+- [ ] Mobile Responsive
