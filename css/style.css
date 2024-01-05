@@ -31,7 +31,7 @@ h1{
   justify-content: center;
   position: relative;
   align-items: center;
-  gap: 70px;
+  gap: 75px;
 }
 
 .board {
@@ -69,5 +69,32 @@ h1{
 
 #reset-button:hover {
   color: white;
-  background-color: black;
+  background-color: rgb(207, 23, 23);
+}
+
+#music-button {
+  margin-top: 25px;
+  border-radius: 5px; 
+  border: 3px solid black;
+  font-size: 15px;
+  background-color: white;
+  padding: 6px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+#music-button:hover {
+  color: white;
+  background-color: rgb(207, 23, 23);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 30px;
 }
