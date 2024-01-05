@@ -9,9 +9,9 @@ const winnerSound = new Audio('../assets/audio/omgwinner.mp3')
 const buzzerSound = new Audio('../assets/audio/timerbuzz.mp3')
 const backgroundSound = new Audio('../assets/audio/simptheme.mp3')
 dohSound.volume = 0.1
-woohooSound.volume = 0.3
+woohooSound.volume = 0.1
 winnerSound.volume = 0.1
-buzzerSound.volume = 0.3
+buzzerSound.volume = 0.1
 backgroundSound.volume = 0.02
 backgroundSound.loop = true
 /*---------------------------- Variables (state) ----------------------------*/
@@ -25,12 +25,14 @@ const matchEl = document.querySelector('#matches')
 const timerEl = document.querySelector('#timer')
 const messageEl = document.querySelector('#message')
 const resetBtn = document.querySelector('#reset-button')
+const musicBtn = document.querySelector('#music-button')
 
 /*----------------------------- Event Listeners -----------------------------*/
 cardEls.forEach(function(cardEl) {
   cardEl.addEventListener('click', handleClick)
 })
 resetBtn.addEventListener('click', init)
+musicBtn.addEventListener('click', toggleMusic)
 
 /*-------------------------------- Functions --------------------------------*/
 init()
@@ -88,6 +90,7 @@ function tick() {
   if (timeLeft === 0) {
     clearInterval(timerIntervalId)
     lose = true
+    buzzerSound.play()
     render()
   } else {
     renderTime()
@@ -131,6 +134,7 @@ function checkForMatch(cardIdx) {
   if (board[cardIdx].name === board[activeCard].name) {
     match++
     activeCard = null
+    woohooSound.play()
   } else {
     mismatchShowing = true
     dohSound.play()
@@ -176,6 +180,14 @@ function updateMessage() {
     messageEl.textContent = "Woo-hoo! I am so smart! S-M-R-T!"
   } else {
     messageEl.textContent = "Trying is the first step towards failure!"
+  }
+}
+
+function toggleMusic() {
+  if (backgroundSound.volume === 0) {
+    backgroundSound.volume = 0.02
+  } else {
+    backgroundSound.volume = 0
   }
 }
 
