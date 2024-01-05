@@ -14,9 +14,9 @@ winnerSound.volume = 0.1
 buzzerSound.volume = 0.1
 backgroundSound.volume = 0.02
 backgroundSound.loop = true
+
 /*---------------------------- Variables (state) ----------------------------*/
 let board, moves, match, activeCard, mismatchShowing, winner, lose, timeLeft, timerIntervalId
-
 
 /*------------------------ Cached Element References ------------------------*/
 const cardEls = document.querySelectorAll('.card')
@@ -74,8 +74,7 @@ function shuffleCards(cards) {
   while (currentIndex > 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-    [cards[currentIndex], cards[randomIndex]] = [
-      cards[randomIndex], cards[currentIndex]];
+    [cards[currentIndex], cards[randomIndex]] = [cards[randomIndex], cards[currentIndex]];
   }
   return cards;
 }
