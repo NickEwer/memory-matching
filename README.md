@@ -18,7 +18,7 @@ Enjoy a Simpsons themed memory matching card game! In this game, you must pick t
 ## Ice Box 🧊
 
 - [x] Font Design
-- [x] Highlight Cards flipped
+- [ ] Highlight Cards flipped
 - [x] Card Animations
 - [x] Timer
 - [x] Sound
