@@ -49,6 +49,9 @@ function init() {
   setupBoard()
   clearInterval(timerIntervalId)
   timerIntervalId = null
+  cardEls.forEach(cardEl => {
+    cardEl.classList.remove('animate__animated', 'animate__flipInY')
+  })
   render()
 }
 
