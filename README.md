@@ -17,16 +17,16 @@ Memory Matching Card Game
 
 ## Ice Box 🧊
 
-- [x] Font design
-- [x] Highlight cards flipped
-- [x] Card animaitons
-- [x] Add timer
+- [x] Font Design
+- [x] Highlight Cards flipped
+- [x] Card Animations
+- [x] Timer
 - [x] Sound
-- [x] Audio button
 - [x] Confetti
-- [ ] Difficulty modes
-- [ ] Different themes for each difficulty; e.g. Universal Studios Park themes
-- [ ] Change confetti to themed emotes
-- [ ] Navigaiton bar
-- [ ] Dark mode
+- [x] Audio Button
+- [ ] Difficulty Modes
+- [ ] Different Themes for each difficulty; e.g. Universal Studios Park themes
+- [ ] Change Confetti to Themed emotes
+- [ ] Navigation Bar
+- [ ] Dark Mode
 - [ ] Mobile Responsive
