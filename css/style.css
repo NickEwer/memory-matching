@@ -8,6 +8,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  font-family: 'Gloria Hallelujah', cursive;
 } 
 
 .container{
@@ -23,15 +24,15 @@ body {
 }
 
 h1 {
-  font-size: 32px;
-  color: rgb(246, 209, 20);
+  font-size: 40px;
+  color: rgb(255, 218, 34);
   text-transform: uppercase;
   text-shadow: 2px 2px 0px black;
   letter-spacing: 3px;
 }
 
 h2{
-  color: rgb(246, 209, 20);
+  color: rgb(255, 218, 34);
   text-shadow: 2px 2px 0px black;
   letter-spacing: 3px;
 }
@@ -43,7 +44,7 @@ h2{
   position: relative;
   align-items: center;
   gap: 75px;
-  color: rgb(246, 209, 20);
+  color: rgb(255, 218, 34);
   text-shadow: 1px 1px 1px black;
 }
 
