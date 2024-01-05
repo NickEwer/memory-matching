@@ -128,6 +128,7 @@ function handleClick(evt) {
 
 function flipCard (cardIdx) {
   board[cardIdx].isFlipped = !board[cardIdx].isFlipped
+  cardEls[cardIdx].classList.add('animate__animated', 'animate__flipInY')
 }
 
 function checkForMatch(cardIdx) {
@@ -144,7 +145,7 @@ function checkForMatch(cardIdx) {
       render()
       activeCard = null
       mismatchShowing = false
-    }, 1200)
+    }, 1500)
   }
 }
 
@@ -160,7 +161,6 @@ function checkForWinner() {
 function updateBoard() {
   board.forEach(function(card, idx) {
     if (card.isFlipped) {
-      // cardEls[idx].textContent = card.name
       cardEls[idx].style.backgroundImage = `url(assets/images/${card.name})`
     } else {
       cardEls[idx].style.backgroundImage = "url(assets/images/cardback.png)"
