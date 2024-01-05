@@ -1,12 +1,13 @@
-# Homer's Memory Challenge!
+# **Homer's Memory Challenge!**
 
 ![Alt text](assets/images/GameScreenshot.png)
 
-Memory Matching Card Game
+Enjoy a Simpsons themed memory matching card game! In this game, you must pick two cards to see if they are a match. If they are not a match, you can keep trying. If you do get a match, the cards matched will stay flipped for you. Keep track of every card clicked by looking at the Move counter. You can also know your score by looking at the Matches counter for every match that is made. However, watch out! You will only have three minutes per game or it is game over... D'oh! But don't worry! There is a reset button to try again. Once all of the cards are matched with its corresponding pair, the timer will stop and you have won the game! Good luck and have fun with Homer's Memory Challenge! 
 
 
-## [Play the game here!](https://mmcg-br.netlify.app/) 🎮
+## [Play Homer's Memory Challenge here!](https://mmcg-br.netlify.app/) 🎮
 
+## [Planning Materials](https://docs.google.com/document/d/119J0NP4qZ_RGF30xsDbitaX8LVAcPrxDHGMycA0jUIQ/edit?usp=sharing) 💭
 ## Technologies used 💻
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   ![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
 

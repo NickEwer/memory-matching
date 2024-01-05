@@ -33,7 +33,7 @@ function init() {
   mismatchShowing = false
   winner = false
   lose = false
-  timeLeft = 600
+  timeLeft = 180
   setupBoard()
   clearInterval(timerIntervalId)
   timerIntervalId = null
