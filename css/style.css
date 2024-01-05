@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(55, 132, 64);
+  background-image: url("/assets/images/homerrun.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,14 +16,23 @@ body {
   justify-content: center;
   position: relative;
   align-items: center;
-  background-color: rgb(213, 213, 46);
+  background-color: rgba(32, 32, 27, 0.637);
+  border: 10px solid black;
+  border-radius: 15px;
   padding: 40px 60px;
 }
 
-h1{
+h1 {
   font-size: 32px;
-  color: black;
+  color: rgb(246, 209, 20);
   text-transform: uppercase;
+  text-shadow: 2px 2px 0px black;
+  letter-spacing: 3px;
+}
+
+h2{
+  color: rgb(246, 209, 20);
+  text-shadow: 2px 2px 0px black;
   letter-spacing: 3px;
 }
 
@@ -32,6 +43,8 @@ h1{
   position: relative;
   align-items: center;
   gap: 75px;
+  color: rgb(246, 209, 20);
+  text-shadow: 1px 1px 1px black;
 }
 
 .board {
